@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&family=Space+Mono:ital@1&display=swap');
+
+.button {
+    width: 80px;
+    height: 31px;
+    background-color: #00474b;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 20px;
+}
+.button:hover{
+    background-color: #9fe8df;
+    color: #00474b;
+}
+.buttonClicked {
+    width: 80px;
+    height: 31px;
+    background-color: #26c2ad;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 17px;
+}
+
+.buttonInput {
+    border-radius: 5px;
+    height: 31px;
+    width: 80px;
+    background-color:#f3f8fb;
+    text-align: right;
+}

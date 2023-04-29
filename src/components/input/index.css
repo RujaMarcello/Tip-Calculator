@@ -1,0 +1,38 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    height: 71px;
+    gap:8px;
+}
+
+.textInput {
+    display: flex;
+    justify-content: space-between;
+    color: #708483;
+    font-size: 13px;
+}
+
+input { 
+    border-radius: 5px;
+    height: 31px;
+    background-color: #f3f8fb;
+    width: 100%;
+    border: 0px solid #ccc;
+    text-align: right;
+    font-weight: bold;
+    color: #00474b;
+    font-size: 20px;
+}
+
+input:hover {
+    border:2px solid #8ed8ce;
+}
+input:focus {
+    border:2px solid #8ed8ce;
+}
+
+
+
+.errorText {
+    color:red;
+}

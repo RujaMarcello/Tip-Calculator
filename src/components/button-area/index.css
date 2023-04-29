@@ -1,0 +1,16 @@
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap:12px;
+}
+
+.procentText {
+  color:#708483;
+  font-size: 13px;
+}

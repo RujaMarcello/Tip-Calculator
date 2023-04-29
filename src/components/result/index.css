@@ -1,0 +1,17 @@
+.resultContainer {
+display: flex;
+justify-content: space-between;
+}
+.text h5 {
+    color :white;
+    margin-bottom: 0px;
+}
+.text p {
+    color:#629295;
+    margin-top:0px;
+}
+.result {
+    color :#2cbdac;
+    display: flex;
+    align-items: center;
+}
