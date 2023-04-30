@@ -27,8 +27,8 @@ input {
 input:hover {
     border:2px solid #8ed8ce;
 }
-input:focus {
-    border:2px solid #8ed8ce;
+input:focus-visible {
+    outline-color:#9fe8df;
 }
 
 

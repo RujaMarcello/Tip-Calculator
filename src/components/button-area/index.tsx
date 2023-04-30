@@ -1,12 +1,9 @@
 import './index.css';
 
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import Button from '../button';
-interface ButtonAreaProps {
-  defaultValue: number;
-  handleValue: (key: string, value: number) => void;
-}
+
 type Buttons = {
   button5: boolean;
   button10: boolean;
@@ -14,35 +11,15 @@ type Buttons = {
   button25: boolean;
   button50: boolean;
 };
-const ButtonArea: FC<ButtonAreaProps> = ({ defaultValue, handleValue }) => {
-  const [isPressed, setIsPressed] = useState<Buttons>({
-    button5: false,
-    button10: false,
-    button15: false,
-    button25: false,
-    button50: false,
-  });
 
-  const resetState = () => {
-    setIsPressed({
-      button5: false,
-      button10: false,
-      button15: false,
-      button25: false,
-      button50: false,
-    });
-  };
+interface ButtonAreaProps {
+  defaultValue: number;
+  handleValue: (key: string, value: number) => void;
+  isPressed: Buttons;
+  handleClick: (clickedButton: string) => void;
+}
 
-  const handleClick = (clickedButton: string) => {
-    setIsPressed({
-      button5: false,
-      button10: false,
-      button15: false,
-      button25: false,
-      button50: false,
-      [clickedButton]: true,
-    });
-  };
+const ButtonArea: FC<ButtonAreaProps> = ({ defaultValue, handleValue, isPressed, handleClick }) => {
   return (
     <div className="buttonsContainer">
       <div className="procentText">

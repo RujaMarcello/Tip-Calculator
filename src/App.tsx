@@ -6,16 +6,42 @@ import ButtonArea from './components/button-area';
 import Input from './components/input';
 import Result from './components/result';
 
+type Buttons = {
+  button5: boolean;
+  button10: boolean;
+  button15: boolean;
+  button25: boolean;
+  button50: boolean;
+};
+
 function App() {
   const [results, setResults] = useState({
     tipAmount: 0,
     total: 0,
   });
 
+  const [isPressed, setIsPressed] = useState<Buttons>({
+    button5: false,
+    button10: false,
+    button15: false,
+    button25: false,
+    button50: false,
+  });
+
   type Values = {
     bill: number;
     tipProcent: number;
     numberOfPeople: number;
+  };
+  const handleClick = (clickedButton: string) => {
+    setIsPressed({
+      button5: false,
+      button10: false,
+      button15: false,
+      button25: false,
+      button50: false,
+      [clickedButton]: true,
+    });
   };
 
   const [values, setValues] = useState<Values>({
@@ -29,6 +55,13 @@ function App() {
       bill: 0,
       tipProcent: 0,
       numberOfPeople: 0,
+    });
+    setIsPressed({
+      button5: false,
+      button10: false,
+      button15: false,
+      button25: false,
+      button50: false,
     });
   };
 
@@ -53,7 +86,12 @@ function App() {
           summary={'Bill'}
           error={false}
         ></Input>
-        <ButtonArea handleValue={handleValue} defaultValue={values.tipProcent} />
+        <ButtonArea
+          handleClick={handleClick}
+          isPressed={isPressed}
+          handleValue={handleValue}
+          defaultValue={values.tipProcent}
+        />
         <Input
           field={'numberOfPeople'}
           handleValue={handleValue}
